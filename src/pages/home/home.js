@@ -1,4 +1,4 @@
-import { Navbar, Header, Categories, Footer } from "../../components/homeComp";
+import { Navbar, Header, GetCategories, Footer } from "../../components/homeComp";
 export function Home() {
     return (
       <div>
@@ -8,7 +8,7 @@ export function Home() {
       </div>
 
       <h2>Shop by Categories</h2>
-      <Categories />
+      <GetCategories />
       <Footer />
       </div>
     );
