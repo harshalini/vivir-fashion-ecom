@@ -2,26 +2,27 @@ import { useProduct } from "../../context/productList-context";
 export function GetProducts() {
   const { product } = useProduct();
   return (
-    <div class="product-flex">   
+    <div className="product-flex">   
       <div className="vivir-products">
+      <h2 className="all-products">All Products</h2>
         <div className="product-row">
           {product.map((item) => (
-            <div class="ui-component card card-with-shadow" key = {item._id}>
-              <div class="card-image">
+            <div className="ui-component card card-with-shadow" key = {item._id}>
+              <div className="card-image">
                 <img src={item.productImg}></img>
               </div>
-              <div class="ratings">
-                <p><i class="fas fa-star"></i>{item.ratings}</p>
+              <div className="ratings">
+                <p><i className="fas fa-star"></i>{item.ratings}</p>
               </div>
-              <button class="addCart-btn">Add to cart</button>
-              <i class="wishlist fas fa-heart"></i>
+              <button className="addCart-btn">Add to cart</button>
+              <i className="wishlist fas fa-heart"></i>
 
-              <div class="card-text">
-                <div class="item-title">
+              <div className="card-text">
+                <div className="item-title">
                   <span>{item.title}</span>
                   <p>{item.desc}</p>
                 </div>
-                <div class="price">
+                <div className="price">
                   <p>Rs.{item.discountedPrice}</p>
                   <p>Rs.{item.originalPrice}</p>
                   <p>(55% off)</p>
