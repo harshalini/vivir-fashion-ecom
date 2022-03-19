@@ -4,7 +4,7 @@ export function Navbar() {
     return (
         <div className="navbar">
           <div className="logo">
-           <Link to="">vivir</Link>
+           <Link to="/">vivir</Link>
           </div>
           <div className="search-input">
             <input type="text" placeholder="Looking for something?"></input>
@@ -12,10 +12,10 @@ export function Navbar() {
           <nav>
             <ul className="nav-pages">
               <li>
-                <Link to="/home">Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/display-data">Products</Link>
+                <Link to="/products">Products</Link>
               </li>
               <li>
                 <Link to="/CartPage">
