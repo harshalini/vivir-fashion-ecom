@@ -1,5 +1,4 @@
-import { Navbar } from "../../components/homeComp"
-import { GetProducts } from "../../components/products/product-card"
+import { Navbar, GetProducts } from "../../components/all-comp"
 export function ProductsPage() {
     return (
         <div>

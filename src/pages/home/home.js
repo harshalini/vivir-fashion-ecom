@@ -1,4 +1,4 @@
-import { Navbar, Header, GetCategories, Footer } from "../../components/homeComp";
+import { Navbar, Header, GetCategories, Footer } from "../../components/all-comp";
 export function Home() {
     return (
       <div>
