@@ -2,7 +2,6 @@ import { useProduct } from "../../context/productList-context";
 export function GetProducts() {
   const { product } = useProduct();
   return (
-    <div className="product-flex">   
       <div className="vivir-products">
       <h2 className="all-products">All Products</h2>
         <div className="product-row">
@@ -32,6 +31,5 @@ export function GetProducts() {
           ))}
         </div>
       </div>
-    </div>
   )
 }
