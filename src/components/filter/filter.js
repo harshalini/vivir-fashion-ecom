@@ -3,7 +3,7 @@ import { SortByPrice, CategoryFilter, RatingsFilter } from "./all-filters"
 export function Filter() {
     return (
         <div>
-            <input type="checkbox" id="toggle-sidebar" unchecked></input>
+            <input type="checkbox" id="toggle-sidebar"></input>
             <label htmlFor="toggle-sidebar"><i className="bars-icon fas fa-bars"></i></label>
 
             <aside className="sidebar">

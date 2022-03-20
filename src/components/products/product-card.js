@@ -24,7 +24,6 @@ export function GetProducts() {
                 <div className="price">
                   <p>Rs.{item.discountedPrice}</p>
                   <p>Rs.{item.originalPrice}</p>
-                  <p>(55% off)</p>
                 </div>
               </div>
             </div>

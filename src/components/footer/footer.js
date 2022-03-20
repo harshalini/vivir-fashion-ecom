@@ -32,7 +32,7 @@ export function Footer() {
               </ul>
             </div>
           </div>
-          <div class="footer-social-links">
+          <div className="footer-social-links">
             <span>Connect with us</span>
             <div className="footer-links">
               <Link to=""><i className="fab fa-instagram"></i></Link>

@@ -2,7 +2,7 @@ import { Navbar, GetProducts, Filter } from "../../components/all-comp"
 export function ProductsPage() {
     return (
         <div>
-            <div class="container product-navbar">
+            <div className="container product-navbar">
                 <Navbar />
             </div>
             <div className="product-flex">
