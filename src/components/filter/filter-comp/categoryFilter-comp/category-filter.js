@@ -1,49 +1,60 @@
-import { v4 } from "uuid"
+import { useSortedData } from "../../../../context/filter-context"
 export function CategoryFilter() {
-    const menCategory = [
-        {
-            _id: v4(),
-            mcn: "T-shirt"
-        },
-        {
-            _id: v4(),
-            mcn: "Jeans"
-        }
-    ]
-    const womenCategory = [
-        {
-            id: v4(),
-            wcn: "Dresses"
-        },
-        {
-            id: v4(),
-            wcn: "Saree"
-        },
-        {
-            id: v4(),
-            wcn: "Kurta"
-        }
-    ]
+    const { state, dispatch } = useSortedData();
+    const { subCategories } = state;
     return (
         <div className="category-filter">
             <span className="sort-heading">Sort by category</span> <br />
             <span className="sort-heading">Men</span>
             <div className="men-categories">
-                {menCategory.map((prodCategory) => (
-                    <div key={prodCategory.id}>
-                    <input type="checkbox" id="tshirt"></input>
-                    <label htmlFor="tshirt">{prodCategory.mcn}</label>
+                <div>
+                    <input type="checkbox" className="category-sort"
+                        checked={subCategories.includes("tshirt")}
+                        onChange={() =>
+                            dispatch({ type: "CATEGORY", payload: 'tshirt' })
+                        }
+                    ></input>
+                    <label htmlFor="category-sort">t-shirt</label>
                 </div>
-                ))}
+                <div>
+                    <input type="checkbox" className="category-sort"
+                        checked={subCategories.includes("jeans")}
+                        onChange={() =>
+                            dispatch({ type: "CATEGORY", payload: 'jeans' })
+                        }
+                    ></input>
+                    <label htmlFor="category-sort">Jeans</label>
+                </div>
             </div>
             <span className="sort-heading">Women</span>
             <div className="women-categories">
-                {womenCategory.map((prodCategory) => (
-                    <div key={prodCategory.id}>
-                    <input type="checkbox" id="dresses"></input>
-                    <label htmlFor="dresses">{prodCategory.wcn}</label>
+                <div>
+                    <input type="checkbox" className="category-sort"
+                        checked={subCategories.includes("dress")}
+                        onChange={() =>
+                            dispatch({ type: "CATEGORY", payload: 'dress' })
+                        }
+                    ></input>
+                    <label htmlFor="category-sort">Dresses</label>
                 </div>
-                ))}
+                <div>
+                    <input type="checkbox" className="category-sort"
+                        checked={subCategories.includes("saree")}
+                        onChange={() =>
+                            dispatch({ type: "CATEGORY", payload: 'saree' })
+                        }
+                    ></input>
+                    <label htmlFor="category-sort">Saree</label>
+                </div>
+                <div>
+                    <input type="checkbox" className="category-sort"
+                        checked={subCategories.includes("kurta")}
+                        onChange={() =>
+                            dispatch({ type: "CATEGORY", payload: 'kurta' })
+                        }
+                    ></input>
+                    <label htmlFor="category-sort">kurta</label>
+                </div>
             </div>
         </div>
 

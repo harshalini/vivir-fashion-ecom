@@ -14,7 +14,8 @@ export const products = [
     categoryName: "men",
     ratings: 4.3,
     originalPrice: 999,
-    productImg: "./assets/products/t-shirt.webp"
+    productImg: "./assets/products/t-shirt.webp",
+    subCategory: "tshirt"
   },
   {
     _id: uuid(),
@@ -24,7 +25,8 @@ export const products = [
     categoryName: "women",
     ratings: 4.1,
     originalPrice: 2599,
-    productImg: "./assets/products/saree-deals.webp"
+    productImg: "./assets/products/saree-deals.webp",
+    subCategory: "saree"
   },
   {
     _id: uuid(),
@@ -34,7 +36,8 @@ export const products = [
     categoryName: "shoes",
     ratings: 4.3,
     originalPrice: 2399,
-    productImg: "./assets/products/shoes-deals.jpg"
+    productImg: "./assets/products/shoes-deals.jpg",
+    subCategory: "shoes"
   },
   {
     _id: uuid(),
@@ -44,7 +47,8 @@ export const products = [
     categoryName: "men",
     ratings: 4.2,
     originalPrice: 2799,
-    productImg: "./assets/products/jeans-deals.jpg"
+    productImg: "./assets/products/jeans-deals.jpg",
+    subCategory: "jeans"
   },
   {
     _id: uuid(),
@@ -54,7 +58,8 @@ export const products = [
     categoryName: "women",
     ratings: 4.5,
     originalPrice: 2499,
-    productImg: "./assets/products/dress-deals.webp"
+    productImg: "./assets/products/dress-deals.webp",
+    subCategory: "dress"
   },
   {
     _id: uuid(),
@@ -64,7 +69,8 @@ export const products = [
     categoryName: "men",
     ratings: 4.5,
     originalPrice: 1199,
-    productImg: "./assets/products/men-tshirt2.webp"
+    productImg: "./assets/products/men-tshirt2.webp",
+    subCategory: "tshirt"
   },
   {
     _id: uuid(),
@@ -74,7 +80,8 @@ export const products = [
     categoryName: "women",
     ratings: 4.4,
     originalPrice: 1699,
-    productImg: "./assets/products/women-dress2.webp"
+    productImg: "./assets/products/women-dress2.webp",
+    subCategory: "dress"
   },
   {
     _id: uuid(),
@@ -84,7 +91,8 @@ export const products = [
     categoryName: "women",
     ratings: 3.9,
     originalPrice: 1499,
-    productImg: "./assets/products/women-dress3.webp"
+    productImg: "./assets/products/women-dress3.webp",
+    subCategory: "dress"
   },
   {
     _id: uuid(),
@@ -94,7 +102,8 @@ export const products = [
     categoryName: "men",
     ratings: 4,
     originalPrice: 2399,
-    productImg: "./assets/products/men-jeans2.jpg"
+    productImg: "./assets/products/men-jeans2.jpg",
+    subCategory: "jeans"
   },
   {
     _id: uuid(),
@@ -104,7 +113,8 @@ export const products = [
     categoryName: "women",
     ratings: 3.8,
     originalPrice: 1099,
-    productImg: "./assets/products/women-kurta1.jpg"
+    productImg: "./assets/products/women-kurta1.jpg",
+    subCategory: "kurta"
   },
   {
     _id: uuid(),
@@ -114,7 +124,8 @@ export const products = [
     categoryName: "men",
     ratings: 4.3,
     originalPrice: 649,
-    productImg: "./assets/products/men-tshirt3.webp"
+    productImg: "./assets/products/men-tshirt3.webp",
+    subCategory: "tshirt"
   },
   {
     _id: uuid(),
@@ -124,7 +135,8 @@ export const products = [
     categoryName: "women",
     ratings: 4.3,
     originalPrice: 4299,
-    productImg: "./assets/products/women-saree2.webp"
+    productImg: "./assets/products/women-saree2.webp",
+    subCategory: "saree"
   },
   {
     _id: uuid(),
@@ -134,7 +146,8 @@ export const products = [
     categoryName: "women",
     ratings: 4.9,
     originalPrice: 9999,
-    productImg: "./assets/products/footwear2.webp"
+    productImg: "./assets/products/footwear2.webp",
+    subCategory: "shoes"
   },
   {
     _id: uuid(),
@@ -144,7 +157,8 @@ export const products = [
     categoryName: "men",
     ratings: 3.5,
     originalPrice: 3199,
-    productImg: "./assets/products/men-jeans3.webp"
+    productImg: "./assets/products/men-jeans3.webp",
+    subCategory: "jeans"
   },
   {
     _id: uuid(),
@@ -154,7 +168,8 @@ export const products = [
     categoryName: "women",
     ratings: 4,
     originalPrice: 2699,
-    productImg: "./assets/products/women-kurta2.webp"
+    productImg: "./assets/products/women-kurta2.webp",
+    subCategory: "kurta"
   },
   {
     _id: uuid(),
@@ -164,7 +179,8 @@ export const products = [
     categoryName: "women",
     ratings: 4.4,
     originalPrice: 1299,
-    productImg: "./assets/products/women-dress3.webp"
+    productImg: "./assets/products/women-dress3.webp",
+    subCategory: "dress"
   },
   {
     _id: uuid(),
@@ -174,7 +190,8 @@ export const products = [
     categoryName: "women",
     ratings: 4.5,
     originalPrice: 3599,
-    productImg: "./assets/products/women-saree3.webp"
+    productImg: "./assets/products/women-saree3.webp",
+    subCategory: "saree"
   },
   {
     _id: uuid(),
@@ -184,6 +201,7 @@ export const products = [
     categoryName: "men",
     ratings: 4.7,
     originalPrice: 4199,
-    productImg: "./assets/products/footwear4.jpg"
+    productImg: "./assets/products/footwear4.jpg",
+    subCategory: "shoes"
   },
 ];
