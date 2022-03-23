@@ -1,11 +1,15 @@
 import { useProduct } from "../../context/productList-context";
+import { SortedPrice, ProductRatings, GetFliteredProducts } from "../../filter-utils/filterUtils";
 export function GetProducts() {
   const { product } = useProduct();
+  const getSortedProducts = SortedPrice(product)
+  const getRatingProducts = ProductRatings(getSortedProducts)
+  const getCategoryProducts = GetFliteredProducts(getRatingProducts)
   return (
       <div className="vivir-products">
       <h2 className="all-products">All Products</h2>
         <div className="product-row">
-          {product.map((item) => (
+          {getCategoryProducts.map((item) => (
             <div className="ui-component card card-with-shadow" key = {item._id}>
               <div className="card-image">
                 <img src={item.productImg}></img>

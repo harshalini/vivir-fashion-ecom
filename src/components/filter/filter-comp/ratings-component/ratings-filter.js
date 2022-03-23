@@ -1,26 +1,20 @@
 import "./ratings.css"
-
+import { useSortedData } from "../../../../context/filter-context"
 export function RatingsFilter() {
+    const { Pratings, dispatch } = useSortedData()
     return (
-        <div class="sort-by-rating">
-            <span class="sort-heading">Sort by ratings</span>
+        <div className="sort-by-rating">
+            <span className="sort-heading">Sort by ratings</span>
             <div className="ratings-filter-div">
-                <label htmlFor="rating-input">
-                    <input className="rating-input" type={"radio"}></input>
-                    4 stars and above
-                </label>
-                <label htmlFor="rating-input">
-                    <input className="rating-input" type={"radio"}></input>
-                    3 stars and above
-                </label>
-                <label htmlFor="rating-input">
-                    <input className="rating-input" type={"radio"}></input>
-                    2 stars and above
-                </label>
-                <label htmlFor="rating-input">
-                    <input className="rating-input" type={"radio"}></input>
-                    1 stars and above
-                </label>
+                {[4, 3, 2, 1].map((num) => (
+                    <label htmlFor="rating-input">
+                        <input className="rating-input" type="radio" name="rate"
+                            onChange={() => dispatch({ type: "RATINGS", payload: `${num}_above` })}
+                            checked = {Pratings}
+                        ></input>
+                        {num} stars and above
+                    </label>
+                ))}
             </div>
         </div>
     )
