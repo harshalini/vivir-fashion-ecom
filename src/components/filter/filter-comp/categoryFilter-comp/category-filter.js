@@ -8,52 +8,42 @@ export function CategoryFilter() {
             <span className="sort-heading">Men</span>
             <div className="men-categories">
                 <div>
-                    <input type="checkbox" className="category-sort"
+                    <input type="checkbox" id="tshirt-filter"
                         checked={subCategories.includes("tshirt")}
-                        onChange={() =>
-                            dispatch({ type: "CATEGORY", payload: 'tshirt' })
-                        }
+                        onChange={() => dispatch({ type: "CATEGORY", payload: 'tshirt' })}
                     ></input>
-                    <label htmlFor="category-sort">t-shirt</label>
+                    <label htmlFor="tshirt-filter">t-shirt</label>
                 </div>
                 <div>
-                    <input type="checkbox" className="category-sort"
+                    <input type="checkbox" id="jeans-filter"
                         checked={subCategories.includes("jeans")}
-                        onChange={() =>
-                            dispatch({ type: "CATEGORY", payload: 'jeans' })
-                        }
+                        onChange={() => dispatch({ type: "CATEGORY", payload: 'jeans' })}
                     ></input>
-                    <label htmlFor="category-sort">Jeans</label>
+                    <label htmlFor="jeans-filter">Jeans</label>
                 </div>
             </div>
             <span className="sort-heading">Women</span>
             <div className="women-categories">
                 <div>
-                    <input type="checkbox" className="category-sort"
+                    <input type="checkbox" id="dress-filter"
                         checked={subCategories.includes("dress")}
-                        onChange={() =>
-                            dispatch({ type: "CATEGORY", payload: 'dress' })
-                        }
+                        onChange={() => dispatch({ type: "CATEGORY", payload: 'dress' })}
                     ></input>
-                    <label htmlFor="category-sort">Dresses</label>
+                    <label htmlFor="dress-filter">Dresses</label>
                 </div>
                 <div>
-                    <input type="checkbox" className="category-sort"
+                    <input type="checkbox" id="saree-filter"
                         checked={subCategories.includes("saree")}
-                        onChange={() =>
-                            dispatch({ type: "CATEGORY", payload: 'saree' })
-                        }
+                        onChange={() => dispatch({ type: "CATEGORY", payload: 'saree' })}
                     ></input>
-                    <label htmlFor="category-sort">Saree</label>
+                    <label htmlFor="saree-filter">Saree</label>
                 </div>
                 <div>
-                    <input type="checkbox" className="category-sort"
+                    <input type="checkbox" id="kurta-filter"
                         checked={subCategories.includes("kurta")}
-                        onChange={() =>
-                            dispatch({ type: "CATEGORY", payload: 'kurta' })
-                        }
+                        onChange={() => dispatch({ type: "CATEGORY", payload: 'kurta' })}
                     ></input>
-                    <label htmlFor="category-sort">kurta</label>
+                    <label htmlFor="kurta-filter">kurta</label>
                 </div>
             </div>
         </div>
