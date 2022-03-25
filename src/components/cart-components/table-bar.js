@@ -1,6 +1,6 @@
 export const TableBar = () => {
     return (
-        <div className="cart-product" style={{ marginTop: "6rem" }}>
+        <div className="cart-product">
             <p className="table-title">Product</p>
             <p className="table-title">Quantity</p>
             <p className="table-title">Subtotal</p>

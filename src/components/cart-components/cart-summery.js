@@ -2,11 +2,7 @@ import { useCart } from "../../context/cart-context";
 import { useState, useEffect } from "react";
 export const CartSummery = () => {
     const { cartState: { cart } } = useCart();
-    const [total, setTotal] = useState();
-
-    useEffect(() => {
-        setTotal(cart.reduce((acc, curr) => acc + curr.discountedPrice * curr.qty, 0));
-    }, [cart]);
+    const total = cart.reduce((acc, curr) => acc + curr.discountedPrice * curr.qty, 0)
     if (cart.length > 0) {
         return (
             <div>
@@ -22,7 +18,7 @@ export const CartSummery = () => {
                     <p><strong>Rs. {total + 49}</strong></p>
                 </div>
             </div>
-             <button class="btn v-btn checkout-btn">Proceed to checkout</button> 
+             <button className="btn v-btn checkout-btn">Proceed to checkout</button> 
              </div>
         );
     } else return null;
