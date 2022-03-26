@@ -1,5 +1,5 @@
 import "./ratings.css"
-import { useSortedData } from "../../../../context/filter-context"
+import { useSortedData } from "../../../../context/allContext"
 export function RatingsFilter() {
     const { Pratings, dispatch } = useSortedData()
     return (

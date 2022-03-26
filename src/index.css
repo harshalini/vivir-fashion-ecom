@@ -2,6 +2,7 @@
 @import url("https://vivirfashion.netlify.app/style.css");
 @import url("https://vivirfashion.netlify.app/products.css");
 @import url("https://vivirfashion.netlify.app/cart/cart.css");
+@import url("https://vivirfashion.netlify.app/wishlist/wishlist.css");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

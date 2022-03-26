@@ -1,4 +1,4 @@
-import { useSortedData } from "../../../../context/filter-context"
+import { useSortedData } from "../../../../context/allContext"
 export function CategoryFilter() {
     const { state, dispatch } = useSortedData();
     const { subCategories } = state;
