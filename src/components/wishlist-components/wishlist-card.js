@@ -1,4 +1,5 @@
 import { useWishlist, useCart } from "../../context/allContext"
+import { Link } from "react-router-dom"
 export const WishlistItem = () => {
     const { wishlistState: { wishlist }, wishlistDispatch } = useWishlist()
     const { cartState: { cart }, cartDispatch } = useCart()
@@ -31,8 +32,7 @@ export const WishlistItem = () => {
                             </div>
                         </div>
                         {cart.some((item) => item.id === prod.id) ? (<button
-                            className="move-cart-btn">
-                            Already in cart
+                            className="move-cart-btn"><Link to = "/cart">Go to cart</Link>
                         </button>) :
                             (<button
                                 className="move-cart-btn"

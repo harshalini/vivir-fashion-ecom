@@ -10,7 +10,7 @@ export function CartPage() {
                 <Navbar />
             </div>
             <h2>My Cart</h2>
-            {cart.length > 0 ? TableBar() : EmptyBar()}
+            {cart.length > 0 ? <TableBar /> : <EmptyBar />}
             <CartItem />
             <CartSummery />
         </div>
