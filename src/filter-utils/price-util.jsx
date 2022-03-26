@@ -1,4 +1,4 @@
-import { useSortedData } from "../context/filter-context";
+import { useSortedData } from "../context/allContext";
     export const SortedPrice = (data) => {
       const { state } = useSortedData();
       if (state.sortBy === "High_to_low") return data.sort((a, b) => b.discountedPrice - a.discountedPrice);

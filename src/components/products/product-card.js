@@ -1,15 +1,12 @@
-import { useProduct } from "../../context/productList-context";
+import { useProduct, useWishlist, useCart } from "../../context/allContext";
 import { SortedPrice, ProductRatings, GetFliteredProducts } from "../../filter-utils/filterUtils";
-import { useCart } from "../../context/cart-context";
 import { Link } from "react-router-dom";
 export function GetProducts() {
   const { cartState: {cart}, cartDispatch } = useCart()
+  const { wishlistState: { wishlist }, wishlistDispatch } = useWishlist();
   const { product } = useProduct();
   const compose = (...getProd) => (product) =>getProd.reduce((data , getProd) =>getProd(data), product);
-  const filteredProduct = compose( SortedPrice , ProductRatings , GetFliteredProducts ) (product )
-  /*const getSortedProducts = SortedPrice(product)
-  const getRatingProducts = ProductRatings(getSortedProducts)
-  const getCategoryProducts = GetFliteredProducts(getRatingProducts)*/
+  const filteredProduct = compose( SortedPrice , ProductRatings , GetFliteredProducts ) ( product )
   return (
       <div className="vivir-products">
       <h2 className="all-products">All Products</h2>
@@ -37,8 +34,20 @@ export function GetProducts() {
                 Add to cart
               </button>
             )}
-              <i className="wishlist fas fa-heart"></i>
-
+             {wishlist.some((w) => w.id === item.id) ? (
+              <i className="wishlist fas fa-heart" style={{ color: "red" }}
+              onClick={() => 
+                wishlistDispatch({ type: "REMOVE_FROM_WISHLIST", payload: item })
+              }
+              ></i>
+            ) : (
+              <i
+                className="wishlist fas fa-heart"
+                onClick={() => 
+                  wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: item })
+                }
+              ></i>
+            )}
               <div className="card-text">
                 <div className="item-title">
                   <span>{item.title}</span>

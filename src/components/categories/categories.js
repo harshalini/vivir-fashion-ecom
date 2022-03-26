@@ -1,4 +1,4 @@
-import { useCategory } from "../../context/category-context";
+import { useCategory } from "../../context/allContext";
 
 export function GetCategories() {
   const { category } = useCategory()

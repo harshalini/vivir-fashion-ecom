@@ -1,5 +1,5 @@
 import "../filter/filter.css"
-import { useSortedData } from "../../context/filter-context"
+import { useSortedData } from "../../context/allContext"
 import { SortByPrice, CategoryFilter, RatingsFilter } from "./all-filters"
 export function Filter() {
     const { dispatch } = useSortedData()

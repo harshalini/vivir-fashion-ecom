@@ -1,4 +1,4 @@
-import { useSortedData } from "../context/filter-context";
+import { useSortedData } from "../context/allContext";
 export const GetFliteredProducts = (filteredProducts) => {
     const { state } = useSortedData()
     const { subCategories } = state

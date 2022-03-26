@@ -1,5 +1,5 @@
-import { useCart } from "../../context/cart-context";
-import { useState, useEffect } from "react";
+import { useCart } from "../../context/allContext";
+
 export const CartSummery = () => {
     const { cartState: { cart } } = useCart();
     const total = cart.reduce((acc, curr) => acc + curr.discountedPrice * curr.qty, 0)

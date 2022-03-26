@@ -1,5 +1,5 @@
 import "./price.css"
-import { useSortedData } from "../../../../context/filter-context"
+import { useSortedData } from "../../../../context/allContext"
 export function SortByPrice() {
     const { sortBy, dispatch } = useSortedData()
     return (

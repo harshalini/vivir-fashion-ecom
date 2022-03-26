@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { useCart } from "../../context/cart-context";
+import { useCart, useWishlist } from "../../context/allContext";
 import "../../pages/cart/cart.css"
 export function Navbar() {
   const { cartState: { cart } } = useCart()
+  const { wishlistState: { wishlist } } = useWishlist()
   return (
     <div className="navbar">
       <div className="logo">
@@ -29,11 +30,16 @@ export function Navbar() {
                 </div>
             </div>
           </li>
-            <li>
-              <Link to="/wishlistPage">
-                <i className="nav-icon fas fa-heart"></i>
-              </Link>
-            </li>
+          <li>
+          <div className="ui-component badge-on-icon">
+                <div className="badge">
+                    <Link to = "/wishlist">
+                        <i className=" nav-icon fas fa-heart"></i>
+                    </Link>
+                    <span className="bg top">{wishlist.length}</span>
+                </div>
+            </div>
+          </li>
             <li>
               <i className="nav-icon fas fa-user"></i>
             </li>
