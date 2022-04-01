@@ -41,8 +41,9 @@ export function Navbar() {
             </div>
           </li>
             <li>
-              <i className="nav-icon fas fa-user"></i>
+              <Link to = "/login"><i className="nav-icon fas fa-user"></i></Link>
             </li>
+            
         </ul>
       </nav>
     </div>

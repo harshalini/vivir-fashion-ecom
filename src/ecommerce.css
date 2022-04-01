@@ -3,6 +3,7 @@
 @import url("https://vivirfashion.netlify.app/products.css");
 @import url("https://vivirfashion.netlify.app/cart/cart.css");
 @import url("https://vivirfashion.netlify.app/wishlist/wishlist.css");
+@import url("https://vivirfashion.netlify.app/login-page/login.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
@@ -17,4 +18,18 @@ body {
     display: flex;
     margin: auto;
 }
-  
+
+.acc-link {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+.login-link, .signup-link {
+    color: var(--footer-gray);
+}
