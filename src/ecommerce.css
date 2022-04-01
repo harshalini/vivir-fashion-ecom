@@ -32,5 +32,4 @@ body {
 }
 .login-link, .signup-link {
     color: var(--footer-gray);
-    text-decoration: none;
 }

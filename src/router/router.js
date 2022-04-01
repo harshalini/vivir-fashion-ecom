@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom"
-import { Home, ProductsPage, CartPage, Login, SignUp } from "../pages/all-pages"
+import { Home, ProductsPage, CartPage, Login, SignUp } from "../../src/pages"
 import { WishlistPage } from "../pages/wishlist/wishlist";
 export function AppRouter() {
     return (
