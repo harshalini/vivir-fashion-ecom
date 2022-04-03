@@ -1,8 +1,8 @@
 .ratings-filter-div {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 .rating-input {
-    margin-left: -7rem;
+    margin-left: -9rem;
     margin-right: -8rem;
 }
 label[for="rating-input"] {

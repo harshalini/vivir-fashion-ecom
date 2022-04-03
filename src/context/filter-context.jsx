@@ -3,12 +3,12 @@ import { FilterReducer } from "../reducers/filter-reducer";
 const sortFiltercontext = createContext();
 
 const SortFilterDataProvider = ({ children }) => {
-  
+
   const [
     state,
     dispatch
   ] = useReducer(FilterReducer, {
-    sortBy: " ",
+    sortBy: "",
     subCategories: "",
     Pratings: 0
   });

@@ -1,6 +1,8 @@
-import { useCart } from "../../context/allContext";
+import { useCart, useWishlist } from "../../context/allContext";
+import { Link } from "react-router-dom";
 export const CartItem = () => {
-    const { cartState: { cart }, cartDispatch } = useCart()
+    const { cartState: { cart }, cartDispatch } = useCart();
+    const { wishlistState: { wishlist }, wishlistDispatch } = useWishlist();
     return (
         <div>
             {cart.map((prod) => {
@@ -14,16 +16,28 @@ export const CartItem = () => {
                                 <p className="cart-title">{prod.title}</p>
                                 <p className="cart-desc">{prod.desc}</p>
                                 <small className="item-price">Price: Rs. {prod.discountedPrice}</small> <br />
-                                <button className="remove-btn"
-                                    onClick={() => cartDispatch({ type: "REMOVE_FROM_CART", payload: prod })}>
-                                    Remove
-                                </button>
+                                <div className="cart-btns">
+                                    <button className="remove-btn"
+                                        onClick={() => cartDispatch({ type: "REMOVE_FROM_CART", payload: prod })}>
+                                        Remove
+                                    </button>
+                                    {wishlist.some((item) => item.id === prod.id) ? (<button
+                                        className="move-cart-btn w-btn"><Link to="/wishlist">Go to wishlist</Link>
+                                    </button>) :
+                                        (<button
+                                            className="move-cart-btn w-btn"
+                                            onClick={() => wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: prod })
+                                            }>
+                                            Add to wishlist
+                                        </button>)}
+                                </div>
                             </div>
                         </div>
                         <div className="quantity">
                             <select value={prod.qty}
                                 onChange={(e) =>
-                                    cartDispatch({ type: "CHANGE_CART_QTY", payload: {
+                                    cartDispatch({
+                                        type: "CHANGE_CART_QTY", payload: {
                                             id: prod.id,
                                             qty: e.target.value
                                         }
