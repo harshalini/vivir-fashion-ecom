@@ -1,0 +1,78 @@
+@import url(./products.css);
+
+:root {
+    --red: red;
+}
+
+.wishlist-heading {
+    margin-top: 7rem;
+}
+.nav-pages .wishlist-link {
+    color: var(--orange);
+    border-bottom: dotted 2px var(--orange);
+}
+.move-cart-btn {
+    color: var(--orange);
+    border: none;
+    background: radial-gradient(var(--white), var(--light-coral));
+
+}
+.move-cart-btn:hover {
+    background: radial-gradient(var(--white), var(--coral));
+}
+.wl-heart {
+    margin-top: 7.5rem;
+    color: var(--red);
+}
+.wishlist-ratings {
+    margin-top: 5rem;
+}
+.logout-btn {
+    color: var(--orange);
+    border: solid 2px var(--orange);
+    background-color: var(--white);
+    font-weight: normal;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    height: 2.5rem;
+}
+.logout-btn:hover {
+    background: var(--coral);
+    color: var(--white);
+}
+@media only screen and (max-width: 580px) {
+    .logout-btn {
+        position: fixed;
+        right: 1rem;
+        top: 2.3rem;
+        padding: 0.5rem;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .wishlist-heading {
+        display: none;
+    }
+    .wishlist-products {
+        margin-top: 12rem;
+        margin-bottom: 0;
+    }
+    .wishlist-products .card {
+        margin-bottom: 5rem;
+        padding-bottom: 5rem;
+    }
+    .wishlist-products .wishlist {
+        margin-top: 1.5rem;
+    }
+    .wishlist-ratings {
+        margin-top: -1.5rem;
+        margin-left: 8px;
+    }
+    .move-cart-btn {
+        font-size: 14px;
+        margin-left: -5rem;
+    }
+    
+}

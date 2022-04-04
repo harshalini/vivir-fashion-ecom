@@ -1,0 +1,154 @@
+@import url(./products.css);
+:root {
+    --light-gray: #ccc;
+}
+
+.account-page {
+    padding: 3rem 0;
+    background: radial-gradient(var(--white), var(--light-coral));
+}
+.nav-pages .account-link {
+    color: var(--orange);
+    border-bottom: dotted 2px var(--orange);
+}
+.account-container {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signUp-offer {
+    background-color: var(--white);
+    width: 22rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: radial-gradient(var(--white), var(--coral));
+}
+.account-container img {
+    width: 6.8rem;
+}
+.form-container {
+    background-color: var(--white);
+    width: 22rem;
+    height: 25rem;
+    position: relative;
+    text-align: center;
+    padding: 1.25rem 0;
+    margin: auto;
+    box-shadow: var(--box-shadow);
+}
+.form-container span {
+    font-weight: bold;
+    padding: 0 10px;
+    color: var(--footer-gray);
+    cursor: pointer;
+    width: 6.25rem;
+    font-size: 1.125rem;
+}
+.form-container form {
+    max-width: 22rem;
+    padding: 0 1.25rem;
+    position: absolute;
+    top: 6.25rem;
+}
+form input {
+    width: 90%;
+    height: 2rem;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: solid 1px var(--light-gray);
+}
+form input:focus {
+    outline: none;
+    border: solid 1px var(--footer-gray);
+}
+form .account-btn {
+    width: 90%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: var(--orange);
+    color: var(--white);
+    height: 2.25rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.account-btn:hover {
+    color: var(--orange);
+    background-color: var(--white);
+    border: solid 2px var(--orange);
+}
+.account-btn:focus {
+    outline: none;
+}
+.fr-pswd {
+    font-size: 12px;
+    color: var(--black);
+    text-decoration: none;
+}
+.form-btn {
+    display: none;
+}
+.form-container label {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    color: var(--footer-gray);
+}
+.pswd-rem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1.25rem;
+}
+#check {
+    width: 1rem;
+    height: 1rem;
+}
+#remember-check {
+    font-size: 12px;
+    margin-top: 3px;
+}
+#login-btn:checked ~ label[for="login-btn"] {
+    border-bottom: solid 5px var(--orange);
+    color: var(--black);
+}
+#signup-btn:checked ~ label[for="signup-btn"] {
+    border-bottom: solid 5px var(--orange);
+    color: var(--black);
+}
+#login-btn:checked ~ .register-form {
+    display: none;
+}
+#signup-btn:checked ~ .login-form {
+    display: none;
+}
+
+.acc-link {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+.login-link, .signup-link {
+    color: var(--footer-gray);
+}
+
+@media only screen and (max-width: 480px) {
+    .signUp-offer, .form-container {
+        width: 18rem;
+    }
+    .account-container {
+        margin-top: 5rem;
+    }
+}
