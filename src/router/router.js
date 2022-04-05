@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom"
 import { Home, ProductsPage, CartPage, Login, SignUp } from "../../src/pages"
 import { WishlistPage } from "../pages/wishlist/wishlist";
+import { Error } from "../components/error-comp/error";
 export function AppRouter() {
     return (
     <Routes>
@@ -11,6 +12,7 @@ export function AppRouter() {
         <Route path = "wishlist" element = {<WishlistPage />} />
         <Route path = "login" element = {<Login />} />
         <Route path = "signup" element = {<SignUp />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     )
 }

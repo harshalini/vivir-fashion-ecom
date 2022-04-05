@@ -10,7 +10,9 @@ const SortFilterDataProvider = ({ children }) => {
   ] = useReducer(FilterReducer, {
     sortBy: "",
     subCategories: "",
-    Pratings: 0
+    Pratings: 0,
+    sortRange: 0,
+    gCategories: ""
   });
 
   return (

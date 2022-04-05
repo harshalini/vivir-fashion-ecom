@@ -1,11 +1,15 @@
 import { useSortedData } from "../../../../context/allContext"
 export function CategoryFilter() {
     const { state, dispatch } = useSortedData();
-    const { subCategories } = state;
+    const { gCategories, subCategories } = state;
     return (
         <div className="category-filter">
             <span className="sort-heading">Sort by category</span> <br />
-            <span className="sort-heading">Men</span>
+            <input type = "checkbox" id="men-category"
+           onChange={(e) => e.target.checked ? dispatch({ type: "FOR", payload: "men" }) : dispatch({ type: "REMOVE-MEN" })}
+            checked = {gCategories.includes("men")}
+            />
+            <span className="sort-heading" htmlFor = "men-category">Men</span>
             <div className="men-categories">
                 <div>
                     <input type="checkbox" id="tshirt-filter"
@@ -22,7 +26,11 @@ export function CategoryFilter() {
                     <label htmlFor="jeans-filter">Jeans</label>
                 </div>
             </div>
-            <span className="sort-heading">Women</span>
+            <input type = "checkbox" id="women-category"
+            onChange={(e) => e.target.checked ? dispatch({ type: "FOR", payload: "women" }) : dispatch({ type: "REMOVE-WOMEN" })}
+            checked = {gCategories.includes("women")}
+            />
+            <span className="sort-heading" htmlFor = "women-category">Women</span>
             <div className="women-categories">
                 <div>
                     <input type="checkbox" id="dress-filter"
@@ -46,6 +54,11 @@ export function CategoryFilter() {
                     <label htmlFor="kurta-filter">kurta</label>
                 </div>
             </div>
+            <input type = "checkbox" id="men-category"
+           onChange={(e) => e.target.checked ? dispatch({ type: "FOR", payload: "shoes" }) : dispatch({ type: "REMOVE-SHOES" })}
+            checked = {gCategories.includes("shoes")}
+            />
+            <span className="sort-heading" htmlFor = "men-category">Shoes</span>
         </div>
 
     )

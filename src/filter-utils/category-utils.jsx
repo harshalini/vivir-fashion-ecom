@@ -7,3 +7,11 @@ export const GetFliteredProducts = (filteredProducts) => {
     filteredProducts;
   return filteredProducts;
 }
+
+export const GetGender = (data) => {
+  const { state: {gCategories}} = useSortedData();
+  gCategories.length !== 0 ?
+    data = data.filter(({ categoryName }) => gCategories.includes(categoryName)) :
+    data;
+  return data;
+}
