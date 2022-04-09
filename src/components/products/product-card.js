@@ -1,15 +1,15 @@
 import { useProduct, useWishlist, useCart } from "../../context/allContext";
-import { SortedPrice, ProductRatings, GetFliteredProducts } from "../../filter-utils/filterUtils";
+import { SortedPrice, ProductRatings, GetFliteredProducts, SortByRange, GetGender } from "../../filter-utils/filterUtils";
 import { Link } from "react-router-dom";
 export function GetProducts() {
   const { cartState: {cart}, cartDispatch } = useCart()
   const { wishlistState: { wishlist }, wishlistDispatch } = useWishlist();
   const { product } = useProduct();
   const compose = (...getProd) => (product) =>getProd.reduce((data , getProd) =>getProd(data), product);
-  const filteredProduct = compose( SortedPrice , ProductRatings , GetFliteredProducts ) ( product )
+  const filteredProduct = compose( SortedPrice , ProductRatings , GetFliteredProducts, SortByRange, GetGender ) ( product )
   return (
       <div className="vivir-products">
-      <h2 className="all-products">All Products</h2>
+      <h2 className="all-products">Showing Products ({filteredProduct.length})</h2>
         <div className="product-row">
           {filteredProduct.map((item) => (
             <div className="ui-component card card-with-shadow" key = {item._id}>
@@ -20,7 +20,7 @@ export function GetProducts() {
                 <p><i className="fas fa-star"></i>{item.ratings}</p>
               </div>
               {cart.some((p) => p.id === item.id) ? (
-              <button className="addCart-btn"><Link to="/cart">
+              <button className="addCart-btn"><Link to="/cart" style={{textDecoration: "none", color: "black"}}>
                 Go to cart
               </Link>
               </button>

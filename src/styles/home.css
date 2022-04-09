@@ -101,6 +101,10 @@ nav ul li {
     margin-top: 1.5rem;
     cursor: pointer;
 }
+.page-links {
+    text-decoration: none;
+    color: var(--black);
+}
 .v-btn.explore-btn {
   font-weight: normal;
 }
@@ -185,6 +189,14 @@ nav ul li {
 .responsive-image img:hover {
     box-shadow: var(--box-shadow);
     transition: 0.2s ease;
+}
+.cat-ip {
+    margin-top: -3.8rem;
+    margin-left: -11rem;
+}
+#cat-checkbox {
+    width: 25px;
+    height: 25px;
 }
 /* FOOTER */
 footer {

@@ -1,0 +1,17 @@
+@import url(./home.css);
+
+#bg {
+    width: 10rem;
+    display: flex;
+    margin: auto; 
+}
+.error-404 {
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--orange);
+}
+.error-msg {
+    margin: 1rem auto 1rem auto;
+    font-size: 1.2rem;
+    color: var(--black);
+}
