@@ -7,13 +7,13 @@ export const FilterReducer = (state, action) => {
     case 'CATEGORY':
       return { ...state, subCategories: [...state.subCategories, action.payload] }
     case 'FOR':
-      return { ...state, gCategories: [...state.gCategories, action.payload] }
+      return { ...state, idealFor: [...state.idealFor, action.payload] }
     case "REMOVE-MEN":
-      return { ...state, gCategories: state.gCategories.filter((prodCat) => prodCat !== "men") }
+      return { ...state, idealFor: state.idealFor.filter((prodCat) => prodCat !== "men") }
     case "REMOVE-WOMEN":
-      return { ...state, gCategories: state.gCategories.filter((prodCat) => prodCat !== "women") }
+      return { ...state, idealFor: state.idealFor.filter((prodCat) => prodCat !== "women") }
     case "REMOVE-SHOES":
-      return { ...state, gCategories: state.gCategories.filter((prodCat) => prodCat !== "shoes") }
+      return { ...state, idealFor: state.idealFor.filter((prodCat) => prodCat !== "shoes") }
     case "REMOVE-TSHIRT":
       return { ...state, subCategories: state.subCategories.filter((prodCat) => prodCat !== "tshirt") }
     case "REMOVE-JEANS":
@@ -32,7 +32,7 @@ export const FilterReducer = (state, action) => {
         subCategories: "",
         Pratings: 0,
         sortRange: 0,
-        gCategories: ""
+        idealFor: ""
       };
     default:
       return state;

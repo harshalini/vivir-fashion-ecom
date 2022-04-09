@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSortedData } from "../../context/filter-context";
 export function GetCategories() {
   const { category } = useCategory();
-  const { state: {gCategories}, dispatch} = useSortedData();
+  const { state: {idealFor}, dispatch} = useSortedData();
   return (
     <div className="shop-by-categories">
     {category.map(({_id, categoryImg, categoryName }) => (
@@ -16,7 +16,7 @@ export function GetCategories() {
       <div className="cat-ip">
       <input type="checkbox" id="cat-checkbox"
       onChange={() => dispatch({type: "FOR", payload: categoryName})}
-      checked = {gCategories.includes(categoryName)}
+      checked = {idealFor.includes(categoryName)}
       ></input>
       </div> 
       </Link>

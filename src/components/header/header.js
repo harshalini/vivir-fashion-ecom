@@ -10,7 +10,7 @@ export function Header() {
             </p>
   
             <button className="btn v-btn explore-btn">
-              <Link to="/products" style={{textDecoration: "none", color: "black"}}>Explore now</Link>
+              <Link to="/products" className="page-links">Explore now</Link>
             </button>
           </div>
           <div className="vivir-header vivir-img">

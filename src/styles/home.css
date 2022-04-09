@@ -101,6 +101,10 @@ nav ul li {
     margin-top: 1.5rem;
     cursor: pointer;
 }
+.page-links {
+    text-decoration: none;
+    color: var(--black);
+}
 .v-btn.explore-btn {
   font-weight: normal;
 }

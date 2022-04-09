@@ -12,7 +12,7 @@ const SortFilterDataProvider = ({ children }) => {
     subCategories: "",
     Pratings: 0,
     sortRange: 0,
-    gCategories: ""
+    idealFor: ""
   });
 
   return (

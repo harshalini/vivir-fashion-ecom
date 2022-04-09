@@ -1,7 +1,6 @@
 import { useSortedData } from "../context/allContext";
 export const GetFliteredProducts = (filteredProducts) => {
-  const { state } = useSortedData()
-  const { subCategories } = state
+  const { state: {subCategories} } = useSortedData()
   subCategories.length !== 0 ?
     filteredProducts = filteredProducts.filter(({ subCategory }) => subCategories.includes(subCategory)) :
     filteredProducts;
@@ -9,9 +8,9 @@ export const GetFliteredProducts = (filteredProducts) => {
 }
 
 export const GetGender = (data) => {
-  const { state: {gCategories}} = useSortedData();
-  gCategories.length !== 0 ?
-    data = data.filter(({ categoryName }) => gCategories.includes(categoryName)) :
+  const { state: {idealFor}} = useSortedData();
+  idealFor.length !== 0 ?
+    data = data.filter(({ categoryName }) => idealFor.includes(categoryName)) :
     data;
   return data;
 }
