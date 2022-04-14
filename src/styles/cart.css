@@ -1,9 +1,22 @@
 @import url(./products.css);
 @import url(./wishlist.css);
+.badge i {
+    font-size: 1.5rem;
+  }
+.bg.top {
+    margin-top: -2rem;
+    margin-left: 0.7rem;
+    height: 1.1rem;
+    width: 1.1rem;
+}
 
-.cart-container {
+.card-image .small-img {
+    height: 10rem;
+}
+.empty-bar {
+    font-weight: 700;
+    font-size: 2rem;
     margin: auto;
-    margin-top: 7rem;
 }
 .cart-product img {
     width: 5rem;
@@ -15,8 +28,16 @@
     height: 2rem;
     padding: 5px;
 }
+.item-in-cart {
+    background: linear-gradient(var(--light-coral), var(--white));
+    border: solid 2px var(--orange);
+    height: 7.5rem;
+}
 .cart-item {
     display: flex;
+}
+.cart-desc {
+    font-weight: 500;
 }
 .nav-pages .cart-link {
     color: var(--orange);
@@ -25,6 +46,11 @@
 .remove-btn {
     color: var(--orange);
     text-decoration: none;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    margin-top: -1rem;
+    cursor: pointer;
 }
 .cart-product {
     display: grid;
@@ -47,9 +73,12 @@
 }
 .cprice-container {
     display: flex;
-    justify-content: flex-end;
-    margin: 0 20%;
+    justify-content: center;
     border-top: solid 4px var(--orange);
+    border: solid 5px var(--orange);
+    width: 25rem;
+    margin: auto;
+    margin-top: 5rem;
 }
 .cprice-container div {
     margin: 2rem;
@@ -57,11 +86,14 @@
 .cprice-container div p {
     margin: 0.5rem 0;
 }
-.checkout-btn {
+button.checkout-btn {
     font-size: 1rem;
-    height: 3.5rem;
-   margin-left: 68%;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 25rem;
+    border-radius: 0;
 }
 
 .cart-btns {
@@ -71,25 +103,47 @@
 }
 .w-btn {
     margin-top: -1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
-
+@media screen and (max-width: 768px) {
+    .cart-product {
+        margin: 2%;
+    }
+    .cart-item img {
+        height: 6rem;
+        width: 4.25rem;
+    }
+   
+}
 @media only screen and (max-width: 480px) {
-    .cart-container {
-        margin-top: 5.5rem;
+    .item-in-cart {
+        border: none;
     }
     .table-title, .item-details p, .cart-price, .remove-btn {
         font-size: 13px;
     }
     .cprice-container {
         font-size: 14px;
-        margin: 0;
+        width: 20rem;
     }
-    .checkout-btn {
-        margin-left: 45%;
-        margin-bottom: 1.5rem;
-        font-weight: normal;
+    .remove-btn {
+        margin-bottom: -2rem;
+        font-size: small;
+        
+    }
+    .item-in-cart {
+        padding-bottom: 5rem;
         margin-top: -1rem;
-        padding: 0 8px;
-        height: 3rem;
+       
+    }
+    .move-cart-btn.w-btn {
+        margin-left: -4rem;
+        margin-bottom: 1rem;
+        padding: 0.2rem;
+       
+    }
+    button.checkout-btn {
+        width: 20rem;
     }
 }

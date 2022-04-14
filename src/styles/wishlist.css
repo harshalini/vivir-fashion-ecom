@@ -13,7 +13,7 @@
 }
 .move-cart-btn {
     color: var(--orange);
-    border: none;
+    border: solid 2px var(--orange);
     background: radial-gradient(var(--white), var(--light-coral));
 
 }
@@ -24,7 +24,7 @@
     margin-top: 7.5rem;
     color: var(--red);
 }
-.wishlist-ratings {
+.ratings.wishlist-ratings {
     margin-top: 5rem;
 }
 .logout-btn {
@@ -55,8 +55,8 @@
     .wishlist-heading {
         display: none;
     }
-    .wishlist-products {
-        margin-top: 12rem;
+    .featured-products.wishlist-products {
+        margin-top: 5.5rem;
         margin-bottom: 0;
     }
     .wishlist-products .card {
@@ -66,8 +66,8 @@
     .wishlist-products .wishlist {
         margin-top: 1.5rem;
     }
-    .wishlist-ratings {
-        margin-top: -1.5rem;
+    .ratings.wishlist-ratings {
+        margin-top: 0rem;
         margin-left: 8px;
     }
     .move-cart-btn {

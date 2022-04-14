@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/all-comp";
 import { WishlistItem } from "../../components/wishlist-components/wishlist-card";
 import { useWishlist } from "../../context/wishlist-context";
-import "../cart/cart.css"
+import "../cart/cart1.css"
 import "./wishlist.css"
 export function WishlistPage() {
   const { wishlistState: { wishlist }} = useWishlist()

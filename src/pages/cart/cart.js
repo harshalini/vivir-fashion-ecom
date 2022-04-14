@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/all-comp";
 import { useCart } from "../../context/allContext";
 import { CartSummery, TableBar, EmptyBar, CartItem } from "../../components/cart-components/cartComp";
-import "./cart.css"
+import "./cart1.css"
 export function CartPage() {
     const { cartState: { cart } } = useCart();
     return (

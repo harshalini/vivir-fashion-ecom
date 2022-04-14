@@ -1,4 +1,3 @@
-import "./ratings.css"
 import { useSortedData } from "../../../../context/allContext"
 export function RatingsFilter() {
     const { state: {Pratings}, dispatch } = useSortedData()

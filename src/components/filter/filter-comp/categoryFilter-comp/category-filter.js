@@ -13,11 +13,13 @@ export function CategoryFilter() {
     return (
         <div className="category-filter">
             <span className="sort-heading">Sort by category</span> <br />
-            <input type="checkbox" id="men-category" value="men"
+            <div>
+            <input type="checkbox" id="idealFor-men" value="men"
                 onChange={(e) => clickCategory(e)}
                 checked={idealFor.includes("men")}
             />
-            <span className="sort-heading" htmlFor="men-category">Men</span>
+            <span className="sort-heading" htmlFor="idealFor-men">Men</span>
+            </div>
             <div className="men-categories">
                 <div>
                     <input type="checkbox" id="tshirt-filter" value="tshirt"
@@ -34,11 +36,13 @@ export function CategoryFilter() {
                     <label htmlFor="jeans-filter">Jeans</label>
                 </div>
             </div>
-            <input type="checkbox" id="women-category" value="women"
+            <div>
+            <input type="checkbox" id="idealFor-women" value="women"
                 onChange={(e) => clickCategory(e)}
                 checked={idealFor.includes("women")}
             />
-            <span className="sort-heading" htmlFor="women-category">Women</span>
+            <span className="sort-heading" htmlFor="idealFor-women">Women</span>
+            </div>
             <div className="women-categories">
                 <div>
                     <input type="checkbox" id="dress-filter" value="dress"
@@ -62,11 +66,13 @@ export function CategoryFilter() {
                     <label htmlFor="kurta-filter">kurta</label>
                 </div>
             </div>
-            <input type="checkbox" id="men-category" value="shoes"
+            <div>
+            <input type="checkbox" id="shoes-category" value="shoes"
                 onChange={(e) => clickCategory(e)}
                 checked={idealFor.includes("shoes")}
             />
-            <span className="sort-heading" htmlFor="men-category">Shoes</span>
+            <span className="sort-heading" htmlFor="shoes-category">Shoes</span>
+            </div>
         </div>
 
     )

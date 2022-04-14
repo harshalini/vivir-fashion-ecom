@@ -4,10 +4,10 @@ export const CartItem = () => {
     const { cartState: { cart }, cartDispatch } = useCart();
     const { wishlistState: { wishlist }, wishlistDispatch } = useWishlist();
     return (
-        <div>
+        <div className="cart-div">
             {cart.map((prod) => {
                 return (
-                    <div className="cart-product"
+                    <div className="cart-product item-in-cart"
                         key={prod.id}
                         style={{ marginBottom: "2.5rem" }}>
                         <div className="cart-item">
@@ -22,7 +22,7 @@ export const CartItem = () => {
                                         Remove
                                     </button>
                                     {wishlist.some((item) => item.id === prod.id) ? (<button
-                                        className="move-cart-btn w-btn"><Link to="/wishlist">Go to wishlist</Link>
+                                        className="move-cart-btn w-btn"><Link to="/wishlist" className = "page-links">Go to wishlist</Link>
                                     </button>) :
                                         (<button
                                             className="move-cart-btn w-btn"
