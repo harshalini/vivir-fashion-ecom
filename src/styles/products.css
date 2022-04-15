@@ -58,13 +58,7 @@ label[for="toggle-sidebar"] {
     z-index: 6;
     visibility: hidden;
 }
-#men-category, #women-category {
-    margin-left: -10rem;
-    margin-bottom: solid 3px var(--orange);
-}
-span[for="men-category"], span[for="women-category"] {
-    margin-left: -9rem;
-}
+
 label[for="toggle-sidebar"]:hover {
     color: var(--orange);
 }
@@ -115,9 +109,29 @@ input[type="range"] {
     margin: 0 0.4rem;
     font-size: 0.8rem;
 }
+.price-sort-div {
+    margin: 1rem 0;
+}
+.price-input {
+    margin-left: -7rem;
+    margin-right: -8rem;
+}
+label[for="price-input"] {
+    margin-right: 3rem;
+}
 .all-products {
     margin-top: 0;
     color: var(--black);
+}
+.ratings-filter-div {
+    margin: 0.5rem 0;
+}
+.rating-input {
+    margin-left: -9rem;
+    margin-right: -8rem;
+}
+label[for="rating-input"] {
+    margin-right: 3rem;
 }
 button.addCart-btn {
     position: absolute;
@@ -130,13 +144,18 @@ button.addCart-btn {
     border: none;
     height: 2.5rem;
 }
+#idealFor-men, #idealFor-women, #shoes-category {
+   margin-left: -5rem;
+}
+span[for="idealFor-men"], span[for="idealFor-women"], span[for="shoes-category"] {
+    margin-left: -9rem;
+}
 .card-with-shadow:hover button.addCart-btn {
     display: block;
 }
 
 @media only screen and (max-width: 1236px) {
     .search-input {
-        width: 30px;
         padding: 0;
     }
 }
@@ -150,19 +169,40 @@ button.addCart-btn {
         grid-template-columns: repeat(2, 10rem);
     }
     .all-products {
-        display: none;
+       font-size: 1.2rem;
+       margin-top: -2rem;
     }
     button.addCart-btn {
         width: 10rem;
         height: 2.2rem;
         text-align: center;
-        margin-top: 5.5rem;
+        margin-top: 20rem;
         font-size: 1rem;
+        display: block;
+    }
+    .addCart-btn:hover {
+        background: linear-gradient(var(--white), var(--orange));
     }
     .search-input {
         display: none;
     }
     label[for="toggle-sidebar"] {
         visibility: visible;
+    }
+    #idealFor-men, #idealFor-women, #shoes-category {
+        margin-left: -4rem;
+    }
+    span[for="idealFor-men"], span[for="idealFor-women"], span[for="shoes-category"] {
+        margin-left: -7rem;
+    }
+    input.rating-input {
+        margin: 0 -6rem 0 -7rem;
+    }
+    .price-sort-div {
+        margin: 1rem 0;
+    }
+    input.price-input {
+        margin-left: -6rem;
+        margin-right: -6.2rem;
     }
 }

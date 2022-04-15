@@ -32,7 +32,7 @@ export const WishlistItem = () => {
                             </div>
                         </div>
                         {cart.some((item) => item.id === prod.id) ? (<button
-                            className="move-cart-btn"><Link to = "/cart">Go to cart</Link>
+                            className="move-cart-btn"><Link to = "/cart" className="page-links">Go to cart</Link>
                         </button>) :
                             (<button
                                 className="move-cart-btn"

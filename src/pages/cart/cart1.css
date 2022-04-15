@@ -1,3 +1,4 @@
+
 .badge i {
     font-size: 1.5rem;
   }
@@ -12,27 +13,13 @@
     font-size: 2rem;
     margin: auto;
 }
-.remove-btn {
-    border: none;
-    background: none;
-    font-size: 1rem;
-    margin-top: -1rem;
-    cursor: pointer;
-}
 .item-details {
     display: flex;
     margin-left: 0;
     flex-direction: column;
     align-items: flex-start;
 }
-.cart-title {
-    font-weight: 500;
-}
+
 .cart-desc {
-    font-size: 1.1rem;
-}
-.checkout-btn {
-      margin-right: 18rem;
-      width: 13rem;
-      font-size: 1rem;
+    font-size: 0.9rem;
 }
