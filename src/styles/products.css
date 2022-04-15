@@ -164,7 +164,6 @@ span[for="idealFor-men"], span[for="idealFor-women"], span[for="shoes-category"]
     .sidebar {
         position: fixed;
     }
-    
     .product-row {
         margin: auto;
         grid-template-columns: repeat(2, 10rem);
@@ -197,8 +196,7 @@ span[for="idealFor-men"], span[for="idealFor-women"], span[for="shoes-category"]
         margin-left: -7rem;
     }
     input.rating-input {
-        margin-left: -7rem;
-        margin-right: -6rem;
+        margin: 0 -6rem 0 -7rem;
     }
     .price-sort-div {
         margin: 1rem 0;

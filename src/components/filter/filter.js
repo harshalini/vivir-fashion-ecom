@@ -5,7 +5,7 @@ export function Filter() {
     const { dispatch } = useSortedData()
     return (
         <div>
-            <input type="checkbox" id="toggle-sidebar" unchecked = "true"></input>
+            <input type="checkbox" id="toggle-sidebar" unchecked = {true}></input>
             <label htmlFor="toggle-sidebar"><i className="bars-icon fas fa-bars"></i></label>
 
             <aside className="sidebar">
