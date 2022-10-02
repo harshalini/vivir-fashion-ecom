@@ -1,6 +1,8 @@
 import { Navbar, GetProducts, Filter } from "../../components/all-comp"
 export function ProductsPage() {
-    return (
+    document.title = "Vivir Fashion | Products"
+
+    return ( 
         <div>
             <div className="container product-navbar">
                 <Navbar />

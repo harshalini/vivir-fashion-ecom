@@ -1,9 +1,9 @@
 import { useCart } from "../../context/allContext";
 
 export const CartSummery = () => {
-    const { cartState: { cart } } = useCart();
-    const total = cart.reduce((acc, curr) => acc + curr.discountedPrice * curr.qty, 0)
-    if (cart.length > 0) {
+    const { cartState: { pr_cart } } = useCart();
+    const total = pr_cart.reduce((acc, curr) => acc + curr.discountedPrice * curr.qty, 0)
+    if (pr_cart.length > 0) {
         return (
             <div>
             <div className="cprice-container">

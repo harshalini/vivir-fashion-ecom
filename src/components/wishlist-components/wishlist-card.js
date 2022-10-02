@@ -1,13 +1,15 @@
 import { useWishlist, useCart } from "../../context/allContext"
 import { Link } from "react-router-dom"
+
 export const WishlistItem = () => {
-    const { wishlistState: { wishlist }, wishlistDispatch } = useWishlist()
-    const { cartState: { cart }, cartDispatch } = useCart()
+    const { wishlistState: { pr_wishlist }, RemoveWishlistProductHandler } = useWishlist()
+    const { cartState: { pr_cart }, CartProductHandler } = useCart()
+
     return (
         <div className="featured-products wishlist-products">
-            {wishlist.map((prod) => {
+            {pr_wishlist?.map((prod) => {
                 return (
-                    <div className="ui-component card card-with-shadow">
+                    <div className="ui-component card card-with-shadow" key={prod._id}>
                         <div className="card-image">
                             <img src={prod.productImg} alt=""></img>
                         </div>
@@ -18,10 +20,7 @@ export const WishlistItem = () => {
                             </p>
                         </div>
                         <i className="wishlist wl-heart fas fa-heart"
-                            onClick={() => wishlistDispatch({
-                                type: "REMOVE_FROM_WISHLIST",
-                                payload: prod
-                            })}></i>
+                            onClick={() => RemoveWishlistProductHandler(prod._id)}></i>
                         <div className="card-text">
                             <div className="item-title">
                                 <span>{prod.title}</span>
@@ -31,13 +30,15 @@ export const WishlistItem = () => {
                                 <p>Rs. {prod.discountedPrice}</p>
                             </div>
                         </div>
-                        {cart.some((item) => item.id === prod.id) ? (<button
-                            className="move-cart-btn"><Link to = "/cart" className="page-links">Go to cart</Link>
+                        {pr_cart?.some((item) => item._id === prod._id) ? (<button
+                            className="move-cart-btn"><Link to="/cart" className="page-links">Go to cart</Link>
                         </button>) :
                             (<button
                                 className="move-cart-btn"
-                                onClick={() => cartDispatch({ type: "ADD_TO_CART", payload: prod })
-                                }>
+                                onClick={() => {
+                                    CartProductHandler(prod._id)
+                                    RemoveWishlistProductHandler(prod._id)
+                                }}>
                                 Move to cart
                             </button>)}
                     </div>
