@@ -1,6 +1,19 @@
 import { Navbar } from "../../components/all-comp"
 import { AccLinks } from "../../components/account-comp/acc-links"
+import { useAuth } from "../../context/auth-context"
+import { useState } from "react"
+
 export const SignUp = () => {
+    document.title = `Vivir Fashion | Signup`
+
+    const { UserSignUpHandler } = useAuth()
+
+    const [userSignUp, setUserSignUp] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: ""
+    })
     return (
         <div>
             <div className="container product-navbar">
@@ -18,11 +31,29 @@ export const SignUp = () => {
                     <div className="form-container">
                         <AccLinks />
                         <form className="register-form">
-                            <input type="text" placeholder="Username" required />
-                            <input type="email" placeholder="Email" required />
-                            <input type="password" placeholder="Password" required />
-                            <input type="password" placeholder="Confirm password" required />
-                            <button type="submit" className="account-btn">Signup</button>
+                            <input type="text" placeholder="Firstname" required
+                                onChange={(e) => setUserSignUp({ ...userSignUp, firstName: e.target.value })}
+                            />
+                            <input type="text" placeholder="LastName" required
+                                onChange={(e) => setUserSignUp({ ...userSignUp, lastName: e.target.value })}
+                            />
+                            <input type="email" placeholder="Email" required
+                                onChange={(e) => setUserSignUp({ ...userSignUp, email: e.target.value })}
+                            />
+                            <input type="password" placeholder="Password" required
+                                onChange={(e) => setUserSignUp({ ...userSignUp, password: e.target.value })}
+                            />
+                            <div className="pswd-rem">
+                                <input type="checkbox" id="check" />
+                                <label id="remember-check">I accept the terms and conditions</label>
+                            </div>
+                            <button type="submit" className="account-btn"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    UserSignUpHandler(userSignUp)
+                                }
+                                }
+                            >Signup</button>
                         </form>
                     </div>
                 </div>
