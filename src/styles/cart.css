@@ -140,11 +140,11 @@ button.checkout-btn {
 }
 
 .not-disable {
-    opacity: 100%;
+    opacity: 1;
 }
 
 .disable {
-    opacity: 50%;
+    opacity: 0.5;
     cursor: default;
 }
 
